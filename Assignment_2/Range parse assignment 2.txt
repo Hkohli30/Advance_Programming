@@ -1,0 +1,38 @@
+// Example program
+#include <iostream>
+#include <string>
+using namespace std;
+
+void parse(string operation)
+{
+ 
+  string s2 = ",";
+  cin>>operation;
+  size_t found = operation.find(",");
+ 
+ if(found != string::npos)
+ {
+    string operand1 = operation.substr(0,found);   // first string
+    string sample = operation.substr(found+1,operation.size()); //
+    string operation_final = sample.substr(sample.size()-1,sample.size());
+    string operand2 = sample.substr(0,sample.size() - 1);
+    
+    cout<<operand1<<endl;
+    cout<<operand2<<endl;
+    cout<<operation_final<<endl;
+ }
+ else
+ {
+     cout<<"not of type ,";
+ }
+}
+
+void isValid(string operation,string operand1, string operand2)
+{
+    
+}
+
+int main()
+{
+    parse("a");
+}
